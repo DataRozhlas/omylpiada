@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style type="text/css">
+
+h1 {
+  text-align:center;
+  background:#282828;
+  color:#fff;
+  margin:0;
+  padding:10px;
+  font-family:"Raleway", sans-serif;
+  font-weight:200;
+}
+
+h2 {
+  text-align:center;
+  color:#000;
+  margin:0;
+  padding:10px;
+  font-family:"Raleway", sans-serif;
+  font-weight:bold;
+  border-radius:0px;
+}
+
+ul {
+  display: inline-table;
+  width:18%;
+  padding:0px;
+  margin:0px;
+  cursor:default;
+}
+
+li {
+  list-style:none;
+  padding:10px;
+  color:#fff;
+  font-family:"Raleway", sans-serif;
+  border-radius:10px;
+  margin:5px;
+}
+
+ul li div {
+  text-align: right;
+  background:#383838;
+  color:#fff;
+  padding:7px;
+  border-radius:5px;
+  position:absolute;
+  min-width:50px;
+  max-width:250px;
+  display:none;
+  font-size:14px;
+  opacity: 1;
+}
+
+ul li div p {
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+ul div:before {
+  content:'';
+  height:3px;
+  width:0;
+  border:7px solid transparent;
+  border-bottom-color:#383838;
+  position:absolute;
+  top:-16px;
+  left:14px;
+}
+
+div a {
+  color:#fff;
+  text-decoration:none;
+}
+
+hr {
+    border: 0;
+    margin: 10px;
+}
+
+.zlato {
+  color:#FFD700;
+}
+
+.stribro {
+  color:#C0C0C0;
+}
+
+.bronz {
+  color:#CD7F32;
+}
+
+#turecko {
+  background:#FC0001;
+}
+
+#estonsko {
+  background:#0872CA;
+}
+
+#svedsko {
+  background:#FFCA00;
+}
+
+</style>
+
+<body>
+
+<h1>Stupně poražených</h1>
+
+<ul>
+
+<li>
+  <h2>Den 0</h2>
+</li>
+
+<li id="turecko">1. Turecko
+  <div>1 <b class="zlato">&#10122;</b> 0 <b class="stribro">&#10123;</b> 0 <b class="bronz">&#10124;</b>
+    <p class="zlato">&#10122; <a href="https://www.pyeongchang2018.com/en/game-time/results/OWG2018/en/ski-jumping/result-men-s-normal-hill-individual-qual-0001sj-.htm">skoky na středním můstku, muži</a></p>
+  </div>
+</li>
+
+<li id="estonsko">2. Estonsko
+  <div>1 <b class="zlato">&#10122;</b> 0 <b class="stribro">&#10123;</b> 0 <b class="bronz">&#10124;</b>
+    <p class="stribro">&#10123; <a href="https://www.pyeongchang2018.com/en/game-time/results/OWG2018/en/ski-jumping/result-men-s-normal-hill-individual-qual-0001sj-.htm">skoky na středním můstku, muži</a></p>
+    <p class="bronz">&#10124; <a href="https://www.pyeongchang2018.com/en/game-time/results/OWG2018/en/ski-jumping/result-men-s-normal-hill-individual-qual-0001sj-.htm">skoky na středním můstku, muži</a></p>
+  </div>
+</li>
+
+</ul>
+
+
+<!-- DEN 1 -->
+
+<ul>
+
+<li>
+  <h2>Den 1</h2>
+</li>
+
+<li id="turecko">1. Turecko
+  <div>1 <b class="zlato">&#10122;</b> 0 <b class="stribro">&#10123;</b> 0 <b class="bronz">&#10124;</b>
+    <p class="zlato">&#10122; <a href="https://www.pyeongchang2018.com/en/game-time/results/OWG2018/en/ski-jumping/result-men-s-normal-hill-individual-qual-0001sj-.htm">skoky na středním můstku, muži</a></p>
+  </div>
+</li>
+
+<li id="estonsko">2. Estonsko
+  <div>0 <b class="zlato">&#10122;</b> 1 <b class="stribro">&#10123;</b> 1 <b class="bronz">&#10124;</b>
+    <p class="stribro">&#10123; <a href="https://www.pyeongchang2018.com/en/game-time/results/OWG2018/en/ski-jumping/result-men-s-normal-hill-individual-qual-0001sj-.htm">skoky na středním můstku, muži</a></p>
+    <p class="bronz">&#10124; <a href="https://www.pyeongchang2018.com/en/game-time/results/OWG2018/en/ski-jumping/result-men-s-normal-hill-individual-qual-0001sj-.htm">skoky na středním můstku, muži</a></p>
+  </div>
+</li>
+
+<li id="svedsko">3. Švédsko
+  <div>1 <b class="zlato">&#10122;</b> 0 <b class="stribro">&#10123;</b> 0 <b class="bronz">&#10124;</b>
+    <p class="zlato">&#10122; <a href="https://www.pyeongchang2018.com/en/game-time/results/OWG2018/en/ski-jumping/result-men-s-normal-hill-individual-qual-0001sj-.htm">skoky na středním můstku, muži</a></p>
+  </div>
+</li>
+
+</ul>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+<script>
+
+$('ul li').mouseenter(function(){
+  var pos = $(this).position();
+  $(this).find('div').css('top', (pos.top)+ 45 + 'px').fadeIn();
+}).mouseleave(function(){
+  $(this).find('div').fadeOut();
+});
+
+</script>
